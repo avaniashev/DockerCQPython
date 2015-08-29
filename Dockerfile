@@ -10,7 +10,9 @@ COPY oursql-0.9.4 oursql
 
 RUN pip install git+https://github.com/jorgecarleitao/django-sphinxql.git
 RUN pip install Cython
-RUN python oursql/setup.py install
+WORKDIR $CQ_CODE/oursql
+RUN python setup.py install
+WORKDIR $CQ_CODE
 RUN pip install -r $CQ_CODE/requirements.txt
 
 VOLUME ["/data/qvark/"]
