@@ -28,6 +28,6 @@ Cython
 #scipy==0.15.1
 #six==1.7.3
 #South==0.8.4
-#sphinxit==0.3.2
-#tablib==0.10.0
-#XlsxWriter==0.7.2
+sphinxit==0.3.2
+tablib==0.10.0
+XlsxWriter==0.7.2
