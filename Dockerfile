@@ -7,6 +7,7 @@ RUN mkdir $CQ_CODE
 WORKDIR $CQ_CODE
 COPY requirements.txt requirements.txt
 
+pip install git+https://github.com/jorgecarleitao/django-sphinxql.git
 RUN pip install -r $CQ_CODE/requirements.txt
 VOLUME ["/data/qvark/"]
 

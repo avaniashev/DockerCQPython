@@ -11,7 +11,6 @@ django-crispy-forms==1.4.0
 django-filter==0.7
 django-import-export==0.2.3
 django-push-notifications==1.2.1
-git+https://github.com/jorgecarleitao/django-sphinxql.git
 django-tables2==0.15.0
 django-uuidfield==0.5.0
 djangorestframework==2.4.2
