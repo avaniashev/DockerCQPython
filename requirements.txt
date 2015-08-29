@@ -1,3 +1,4 @@
+oursql>=0.9.4
 amqp==1.4.6
 anyjson==0.3.3
 billiard==3.3.0.18
@@ -19,7 +20,6 @@ kombu==3.0.22
 matplotlib==1.4.0
 numpy==1.9.2
 ordereddict==1.1
-oursql==0.9.4
 Pillow==2.8.1
 PyMySQL==0.6.2
 pyparsing==2.0.3
