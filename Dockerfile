@@ -6,7 +6,9 @@ ENV CQ_CODE=/code
 RUN mkdir $CQ_CODE
 WORKDIR $CQ_CODE
 COPY requirements.txt requirements.txt
+COPY oursql-0.9.4 oursql
 
+RUN python oursql/setup.py
 RUN pip install git+https://github.com/jorgecarleitao/django-sphinxql.git
 RUN pip install -r $CQ_CODE/requirements.txt
 VOLUME ["/data/qvark/"]
