@@ -11,6 +11,7 @@ COPY oursql-0.9.4 oursql
 RUN pip install uwsgi
 RUN pip install git+https://github.com/jorgecarleitao/django-sphinxql.git
 RUN pip install Cython
+RUN pip install Numpy
 WORKDIR $CQ_CODE/oursql
 RUN python setup.py install
 WORKDIR $CQ_CODE
