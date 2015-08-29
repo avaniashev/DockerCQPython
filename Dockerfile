@@ -8,6 +8,7 @@ WORKDIR $CQ_CODE
 COPY requirements.txt requirements.txt
 COPY oursql-0.9.4 oursql
 
+RUN pip install uwsgi
 RUN pip install git+https://github.com/jorgecarleitao/django-sphinxql.git
 RUN pip install Cython
 WORKDIR $CQ_CODE/oursql
