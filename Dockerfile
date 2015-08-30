@@ -28,6 +28,7 @@ WORKDIR $CQ_CODE
 RUN pip install -r $CQ_CODE/requirements.txt
 
 VOLUME ["/data/qvark/"]
+EXPOSE 8000
 
 WORKDIR /data/qvark/
 CMD uwsgi --socket __main/running.sock --wsgi-file __main/wsgi.py --daemonize log/uwsgi.log --pidfile __main/running.pid --master --buffer-size=65536

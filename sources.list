@@ -16,3 +16,4 @@ deb-src http://extras.ubuntu.com/ubuntu trusty main
 
 deb http://cz.archive.ubuntu.com/ubuntu trusty main universe
 deb http://httpredir.debian.org/debian jessie main
+
