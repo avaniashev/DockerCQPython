@@ -4,3 +4,4 @@ deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty-updates restricted main univ
 deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse #Added by software-properties
 deb-src http://security.ubuntu.com/ubuntu trusty-security restricted main universe multiverse #Added by software-properties
 deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty-proposed restricted main universe multiverse #Added by software-properties
+deb http://cz.archive.ubuntu.com/ubuntu trusty main universe
