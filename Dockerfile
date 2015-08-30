@@ -2,6 +2,7 @@ FROM python:3.3-wheezy
 MAINTAINER Alexander Vaniashev
 
 ENV CQ_CODE=/code
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN mkdir $CQ_CODE
 WORKDIR $CQ_CODE
@@ -10,7 +11,7 @@ COPY oursql-0.9.4 oursql
 
 COPY sources.list /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get build-dep python3-scipy
+RUN apt-get build-dep python3-scipy -y
 
 RUN pip install uwsgi
 RUN pip install git+https://github.com/jorgecarleitao/django-sphinxql.git
