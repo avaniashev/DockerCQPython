@@ -27,8 +27,11 @@ RUN python setup.py install
 WORKDIR $CQ_CODE
 RUN pip install -r $CQ_CODE/requirements.txt
 
-VOLUME ["/data/qvark/"]
+RUN apt-get install wine1.6-amd64
+RUN apt-get install wine1.6-i386:i386
+
+VOLUME ["/data/qvark/www"]
 EXPOSE 8000
 
-WORKDIR /data/qvark/
-CMD uwsgi --socket __main/running.sock --wsgi-file __main/wsgi.py --daemonize log/uwsgi.log --pidfile __main/running.pid --master --buffer-size=65536
+WORKDIR /data/qvark/www/
+CMD uwsgi --http 0.0.0.0:8000 --wsgi-file __main/wsgi.py  --pidfile __main/running.pid --master --buffer-size=65536
