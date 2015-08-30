@@ -2,7 +2,7 @@ FROM python:3.3-wheezy
 MAINTAINER Alexander Vaniashev
 
 ENV CQ_CODE=/code
-ENV DEBIAN_FRONTEND=noninteractive
+#ENV DEBIAN_FRONTEND=noninteractive
 
 RUN mkdir $CQ_CODE
 WORKDIR $CQ_CODE
@@ -10,6 +10,7 @@ COPY requirements.txt requirements.txt
 COPY oursql-0.9.4 oursql
 
 COPY sources.list /etc/apt/sources.list
+RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 3B4FE6ACC0B21F32
 RUN apt-get update
 RUN apt-get build-dep python3-scipy -y —-force-yes
 
