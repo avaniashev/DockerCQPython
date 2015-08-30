@@ -8,6 +8,8 @@ WORKDIR $CQ_CODE
 COPY requirements.txt requirements.txt
 COPY oursql-0.9.4 oursql
 
+COPY sources.list /etc/apt/sources.list
+RUN apt-get update
 RUN apt-get build-dep python3-scipy
 
 RUN pip install uwsgi
