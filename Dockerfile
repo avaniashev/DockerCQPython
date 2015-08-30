@@ -27,8 +27,10 @@ RUN python setup.py install
 WORKDIR $CQ_CODE
 RUN pip install -r $CQ_CODE/requirements.txt
 
-#RUN apt-get install wine1.6-amd64
-#RUN apt-get install wine1.6-i386:i386
+RUN apt-get install wine
+ENV WINEPREFIX=wine32
+ENV WINEARCH=win32
+RUN winecfg
 
 VOLUME ["/data/qvark/www"]
 EXPOSE 8000
