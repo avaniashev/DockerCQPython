@@ -10,7 +10,10 @@ COPY requirements.txt requirements.txt
 COPY oursql-0.9.4 oursql
 
 COPY sources.list /etc/apt/sources.list
-RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 3B4FE6ACC0B21F32
+#RUN apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 3B4FE6ACC0B21F32
+#RUN apt-get install debian-keyring 
+#RUN apt-get install debian-archive-keyring
+#RUN apt-key update
 RUN apt-get update
 RUN apt-get build-dep python3-scipy -y —-force-yes
 
