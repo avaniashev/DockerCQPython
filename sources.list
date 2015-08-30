@@ -1,7 +1,18 @@
-#deb-src http://archive.ubuntu.com/ubuntu trusty main restricted #Added by software-properties
-#deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty restricted main universe multiverse #Added by software-properties
-#deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty-updates restricted main universe multiverse #Added by software-properties
-#deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse #Added by software-properties
-#deb-src http://security.ubuntu.com/ubuntu trusty-security restricted main universe multiverse #Added by software-properties
-#deb-src http://gb.archive.ubuntu.com/ubuntu/ trusty-proposed restricted main universe multiverse #Added by software-properties
+###### Ubuntu Main Repos
+deb http://ru.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse 
+deb-src http://ru.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse 
+
+###### Ubuntu Update Repos
+deb http://ru.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse 
+deb-src http://ru.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse 
+
+###### Ubuntu Partner Repo
+deb http://archive.canonical.com/ubuntu trusty partner
+deb-src http://archive.canonical.com/ubuntu trusty partner
+
+###### Ubuntu Extras Repo
+deb http://extras.ubuntu.com/ubuntu trusty main
+deb-src http://extras.ubuntu.com/ubuntu trusty main
+
 deb http://cz.archive.ubuntu.com/ubuntu trusty main universe
+deb http://httpredir.debian.org/debian jessie main
