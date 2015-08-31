@@ -27,6 +27,8 @@ RUN python setup.py install
 WORKDIR $CQ_CODE
 RUN pip install -r $CQ_CODE/requirements.txt
 
+RUN dpkg --add-architecture i386
+RUN apt-get update
 RUN apt-get install wine1.6
 ENV WINEPREFIX=wine32
 ENV WINEARCH=win32
