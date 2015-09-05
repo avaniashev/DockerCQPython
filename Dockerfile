@@ -33,6 +33,9 @@ RUN apt-get -y install wine1.6
 ENV WINEPREFIX=/root/wine32
 ENV WINEARCH=win32
 RUN winecfg
+ENV WINEPREFIX=/root/wine64
+ENV WINEARCH=win64
+RUN winecfg
 
 VOLUME ["/data/qvark/www"]
 EXPOSE 8000
