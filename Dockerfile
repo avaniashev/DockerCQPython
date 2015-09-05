@@ -28,8 +28,9 @@ WORKDIR $CQ_CODE
 RUN pip install -r $CQ_CODE/requirements.txt
 
 RUN dpkg --add-architecture i386
+RUN add-apt-repository ppa:ubuntu-wine/ppa
 RUN apt-get update
-RUN apt-get -y --fix-missing install wine1.6
+RUN apt-get -y --fix-missing install wine1.7
 ENV WINEPREFIX=/root/wine32
 ENV WINEARCH=win32
 RUN winecfg
