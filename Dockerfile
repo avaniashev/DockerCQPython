@@ -29,7 +29,7 @@ RUN pip install -r $CQ_CODE/requirements.txt
 
 RUN dpkg --add-architecture i386
 RUN apt-get update
-RUN apt-get -y install wine1.6
+RUN apt-get -y --fix-missing install wine1.6
 ENV WINEPREFIX=/root/wine32
 ENV WINEARCH=win32
 RUN winecfg
